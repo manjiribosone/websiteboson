@@ -1,0 +1,16 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-bosonewebsite-dev-2fd68-authRole",
+      "UnauthRoleArn": "arn:aws:iam::366287159265:role/amplify-bosonewebsite-dev-2fd68-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::366287159265:role/amplify-bosonewebsite-dev-2fd68-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-bosonewebsite-dev-2fd68-deployment",
+      "UnauthRoleName": "amplify-bosonewebsite-dev-2fd68-unauthRole",
+      "StackName": "amplify-bosonewebsite-dev-2fd68",
+      "StackId": "arn:aws:cloudformation:us-east-1:366287159265:stack/amplify-bosonewebsite-dev-2fd68/1e9fa440-1368-11ef-abb3-0e56e20a1c1d",
+      "AmplifyAppId": "dlwbfvg5qvowh",
+      "PermissionsBoundaryPolicyArn": "arn:aws:iam::aws:policy/AdministratorAccess-Amplify"
+    }
+  }
+}
