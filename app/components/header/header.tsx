@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import theme from '@/app/theme/theme';
 
 import {
 	Flex, Box,
@@ -8,52 +9,45 @@ import {
 	MenuList,
 	MenuItem,
 	MenuDivider,
+    ButtonGroup,
+    ChakraProvider
 } from "@chakra-ui/react";
 
 
 const Nav = () => {
 
 	return (
-		<Box bg="lightgrey"
-			w="100%" h="100%" p={4}>
-
-			<Flex mt='3' justifyContent="center">
-				<Flex
-					direction="row"
-					alignItems="left"
-					w={{ base: "90%", md: "70%", lg: "50%" }}>
-					<Menu>
-						<MenuButton>
-							<a href="https://www.geeksforgeeks.org/"
-								target="_blank">
-								Bosone
-							</a>
-						</MenuButton>
-						<MenuList>
-							<MenuItem as='a'
-								href='https://www.geeksforgeeks.org/'>
-								Home
-							</MenuItem>
-							<MenuItem as='a' href='#'>
-								About Us
-							</MenuItem>
-							<MenuItem as='a' href='#'>
-								Contact Us
-							</MenuItem>
-							<MenuDivider />
-							<MenuItem as='a' href=
-'https://www.geeksforgeeks.org/jobs?ref=ghm'>
-								Careers
-							</MenuItem>
-							<MenuItem as='a' href=
-'https://www.geeksforgeeks.org/courses/school-guide-course?'>
-								Our Courses
-							</MenuItem>
-						</MenuList>
-					</Menu>
-				</Flex>
-			</Flex>
-		</Box>
+      <ChakraProvider theme={theme}>
+        <div className="w-full h-20 sticky top-0">
+        <div className="container mx-auto px-4 h-full">
+          <div className="flex justify-between items-center h-full">
+            Bosone
+            <ul className="hidden md:flex gap-x-6 text-white">
+              <li>
+                <Link href="/about">
+                  <p>About Us</p>
+                </Link>
+              </li>
+              <li>
+                <Link href="/services">
+                  <p>Services</p>
+                </Link>
+              </li>
+              <li>
+                <Link href="/contacts">
+                  <p>Contacts</p>
+                </Link>
+              </li>
+            </ul>
+            <ButtonGroup spacing='6'>
+            <Button >Signup</Button>
+            <Button bg='brand.100' _hover={{bg: 'brand.200'}} >Login</Button>
+            </ButtonGroup>
+          </div>
+        </div>
+      </div>
+      </ChakraProvider>
 	);
+  
 };
 export default Nav;
