@@ -21,7 +21,7 @@ const Nav = () => {
         <Box bg='black' className="w-full h-20 sticky top-0">
         <div className="container mx-auto px-4 h-full">
           <div className="flex justify-between items-center h-full">
-            Bosone
+            <img src='@/public/bosone-logo.png' alt="Bosone Logo" style={{ width: 100, height: 'auto' }}></img>
             <ul className="hidden md:flex gap-x-6 text-white">
               <li>
                 <Link href="/about">
