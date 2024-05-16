@@ -18,7 +18,7 @@ const Nav = () => {
 
 	return (
       <ChakraProvider theme={theme}>
-        <div className="w-full h-20 sticky top-0">
+        <Box bg='black' className="w-full h-20 sticky top-0">
         <div className="container mx-auto px-4 h-full">
           <div className="flex justify-between items-center h-full">
             Bosone
@@ -41,11 +41,11 @@ const Nav = () => {
             </ul>
             <ButtonGroup spacing='6'>
             <Button >Signup</Button>
-            <Button bg='brand.100' _hover={{bg: 'brand.200'}} >Login</Button>
+            <Button bg='brand.dark-brand-bg1' _hover={{bg: 'brand.dark-brand-bg1-pressed', color: 'white'}} >Login</Button>
             </ButtonGroup>
           </div>
         </div>
-      </div>
+      </Box>
       </ChakraProvider>
 	);
   

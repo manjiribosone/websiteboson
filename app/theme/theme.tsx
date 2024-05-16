@@ -40,9 +40,16 @@ const theme = extendTheme({
   },
   colors: {
     brand: {
-      100: '#479ef5',
-      200: 'green',
+      'dark-brand-fg1': '#479ef5',
+      'dark-brand-fg1-pressed': '#96C6FA',
+      'dark-brand-bg1': '#0F6CBD',
+      'dark-brand-bg1-pressed': '#0E4775',
+
     },
+    grey: {
+      12: '#1F1F1F',
+      18: '#2E2E2E'
+    }
   }
 })
 
