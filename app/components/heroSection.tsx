@@ -19,7 +19,6 @@ import {
               <Heading size="2xl" mb={4} color="white">
                 The Business App
               </Heading>
-              <img className='justify-center' src="@/public/bosone-logo.png"></img>
               <Text fontSize="xl" color="white">
                 Freelancers use Biller to accept payments and send invoices to
                 clients with a single click

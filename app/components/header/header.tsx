@@ -12,6 +12,8 @@ import {
     ButtonGroup,
     ChakraProvider
 } from "@chakra-ui/react";
+import Image from 'next/image';
+
 
 
 const Nav = () => {
@@ -21,7 +23,13 @@ const Nav = () => {
         <Box bg='black' className="w-full h-20 sticky top-0">
         <div className="container mx-auto px-4 h-full">
           <div className="flex justify-between items-center h-full">
-            <img src='@/public/bosone-logo.png' alt="Bosone Logo" style={{ width: 100, height: 'auto' }}></img>
+          <Image
+            src="/bosone-logo.png"
+            alt="Bosone Logo"
+            width={100}  // Set appropriate width
+            height={70} // Set appropriate height
+            className='justify-center'
+          />
             <ul className="hidden md:flex gap-x-6 text-white">
               <li>
                 <Link href="/about">
