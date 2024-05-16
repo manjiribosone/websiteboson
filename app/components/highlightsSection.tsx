@@ -47,7 +47,6 @@ import {
   export const HighlightSection = () => {
     return (
       <Box bg="gray.50">
-        // ...
        <Container maxW="container.md" centerContent py={[8, 28]}>
             <SimpleGrid spacingX={10} spacingY={20} minChildWidth="300px">
               {highlights.map(({ title, description, icon }, i: number) => (
