@@ -9,7 +9,7 @@ export interface LogoProps {
 
 import siteConfig from '@/data/config'
 
-export const Logo = ({ href = '/', onClick }: LogoProps) => {
+export const Logo = ({ href = '/bosone-logo.png', onClick }: LogoProps) => {
   let logo
   if (siteConfig.logo) {
     logo = <Box as={siteConfig.logo} height="32px" mt="-4px" />
