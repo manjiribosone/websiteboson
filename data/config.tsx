@@ -8,8 +8,8 @@ import { Logo } from './logo'
 const siteConfig = {
   logo: Logo,
   seo: {
-    title: 'Saas UI',
-    description: 'The React component library for startups',
+    title: 'Bosone',
+    description: 'The Business App',
   } as NextSeoProps,
   termsUrl: '#',
   privacyUrl: '#',
