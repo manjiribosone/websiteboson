@@ -59,10 +59,7 @@ const FeaturesSection = () => {
       }
       description={
         <>
-          Saas UI Pro includes everything you need to build modern frontends.
-          <Br />
-          Use it as a template for your next product or foundation for your
-          design system.
+          
         </>
       }
       align="left"
