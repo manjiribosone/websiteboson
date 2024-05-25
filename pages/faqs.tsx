@@ -17,6 +17,7 @@ import {
   IconButton,
   VStack,
   Flex,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import { SEO } from "@/components/seo/seo";
 import { FallInPlace } from "@/components/motion/fall-in-place";
@@ -59,9 +60,9 @@ import {
 
 const Faqs: NextPage = () => {
   return (
-    <div>
+    <Container maxW="container.xl" px={4}>
       <HighlightsSection />
-    </div>
+    </Container>
   );
 };
 
@@ -74,18 +75,19 @@ const HighlightsSection = () => {
     <Highlights>
       <Heading
         lineHeight="short"
-        fontSize={["2xl", null, "4xl"]}
+        fontSize={["2xl", "3xl", "4xl"]}
         textAlign="center"
         as="p"
         whiteSpace="nowrap" // Prevents text wrapping
+        mt={4}
       >
-        <Em>Frequently Asked Questions !</Em>
+        <Em>Frequently Asked Questions!</Em>
       </Heading>
       <Br />
 
-      <HighlightsItem colSpan={[1, null, 2]} title="What is Bosone ? ">
-        <VStack alignItems="flex-start" spacing="8">
-          <Text color="muted" fontSize="lg">
+      <HighlightsItem colSpan={[1, 1, 2]} title="What is Bosone?">
+        <VStack alignItems="flex-start" spacing={4}>
+          <Text color="muted" fontSize={["sm", "md", "lg"]}>
             Bosone was created with a vision to revolutionize e-commerce by
             offering a comprehensive platform that simplifies online business
             operations. Founded in [year], Bosone emerged to address the
@@ -97,32 +99,39 @@ const HighlightsSection = () => {
           </Text>
         </VStack>
       </HighlightsItem>
-      <Image
-        src="/What.png"
-        alt="Bosone mindmap"
-        width={500}
-        height={300}
-        style={{ justifyContent: "flex-end", width: "100%", height: "auto" }}
-      />
+      <Box textAlign="center" py={4}>
+        <Image
+          src="/What.png"
+          alt="Bosone mindmap"
+          width={500}
+          height={300}
+          layout="responsive"
+          style={{ borderRadius: "8px" }}
+        />
+      </Box>
 
-      <Image
-        src="/how.png"
-        alt="Bosone mindmap"
-        width={500}
-        height={300}
-        style={{ justifyContent: "flex-end", width: "100%", height: "auto" }}
-      />
-      <HighlightsItem colSpan={[1, null, 2]} title="Why Bosone? ">
-        <VStack alignItems="flex-start" spacing="8">
-          <Text color="muted" fontSize="lg">
+      <Box textAlign="center" py={4}>
+        <Image
+          src="/how.png"
+          alt="Bosone mindmap"
+          width={500}
+          height={300}
+          layout="responsive"
+          style={{ borderRadius: "8px" }}
+        />
+      </Box>
+
+      <HighlightsItem colSpan={[1, 1, 2]} title="Why Bosone?">
+        <VStack alignItems="flex-start" spacing={4}>
+          <Text color="muted" fontSize={["sm", "md", "lg"]}>
             Why Bosone? Bosone is designed to streamline and enhance your
             business operations by providing an integrated suite of tools. It
             offers a robust marketplace for seamless transactions, a
             comprehensive catalog for easy product management, efficient order
             maintenance to track and fulfill orders, and powerful marketing
             features to boost your business’s visibility and reach.
-            Additionally, Bosone's customer networking feature helps you
-            connect with potential clients and partners, facilitating better
+            Additionally, Bosone's customer networking feature helps you connect
+            with potential clients and partners, facilitating better
             communication and collaboration. By consolidating these essential
             tools into one platform, Bosone saves you time, increases
             efficiency, and supports your business growth.
@@ -130,43 +139,38 @@ const HighlightsSection = () => {
         </VStack>
       </HighlightsItem>
 
-      <HighlightsItem colSpan={[1, null, 2]} title="What is the customer networking feature? ">
-        <VStack alignItems="flex-start" spacing="8">
-          <Text color="muted" fontSize="lg">
+      <HighlightsItem colSpan={[1, 1, 2]} title="What is the customer networking feature?">
+        <VStack alignItems="flex-start" spacing={4}>
+          <Text color="muted" fontSize={["sm", "md", "lg"]}>
             The customer networking feature is designed to facilitate
             connections between businesses and their potential clients or
             partners. This feature enables seamless communication,
             collaboration, and relationship-building by providing tools and
             platforms for networking. It helps businesses expand their reach,
             foster strong connections, and enhance their customer base through
-            efficient and effective networking capabilities."
+            efficient and effective networking capabilities.
           </Text>
         </VStack>
       </HighlightsItem>
 
-      <Image
-        src="/network.png"
-        alt="Bosone mindmap"
-        width={500}
-        height={300}
-        style={{ justifyContent: "flex-end", width: "100%", height: "auto" }}
-      />
+      <Box textAlign="center" py={4}>
+        <Image
+          src="/network.png"
+          alt="Bosone mindmap"
+          width={500}
+          height={300}
+          layout="responsive"
+          style={{ borderRadius: "8px" }}
+        />
+      </Box>
 
-      <Flex
-        direction={["column", "column", "row"]}
-        wrap="wrap"
-        justifyContent="space-between"
-        width="100%"
-        spacing={4}
-      >
+      <SimpleGrid columns={[1, 1, 3]} spacing={4} py={4}>
         <HighlightsTestimonialItem
           name=""
           description=""
           avatar=""
           gradient={["pink.200", "purple.500"]}
           style={{
-            flex: 1,
-            margin: "10px",
             padding: "20px",
             border: "1px solid #ccc",
             borderRadius: "8px",
@@ -175,20 +179,19 @@ const HighlightsSection = () => {
           <strong>Do you offer international shipping?</strong>
           <Br />
           <Br />
-          <p>
+          <Text>
             Yes, we offer international shipping. Our global logistics network
             ensures timely and reliable delivery to various international
             destinations, catering to your business needs worldwide.
-          </p>
+          </Text>
         </HighlightsTestimonialItem>
+
         <HighlightsTestimonialItem
           name=""
           description=""
           avatar=""
           gradient={["pink.200", "purple.500"]}
           style={{
-            flex: 1,
-            margin: "10px",
             padding: "20px",
             border: "1px solid #ccc",
             borderRadius: "8px",
@@ -197,20 +200,19 @@ const HighlightsSection = () => {
           <strong>Is my personal information secure on your website?</strong>
           <Br />
           <Br />
-          <p>
+          <Text>
             Yes, your personal information is secure on our website. We
             implement advanced encryption and stringent privacy measures to
             protect your data and ensure your privacy.
-          </p>
+          </Text>
         </HighlightsTestimonialItem>
+
         <HighlightsTestimonialItem
           name=""
           description=""
           avatar=""
           gradient={["pink.200", "purple.500"]}
           style={{
-            flex: 1,
-            margin: "10px",
             padding: "20px",
             border: "1px solid #ccc",
             borderRadius: "8px",
@@ -219,13 +221,13 @@ const HighlightsSection = () => {
           <strong>How can I update my account information?</strong>
           <Br />
           <Br />
-          <p>
+          <Text>
             You can update your account information by logging into your account
             and navigating to the edit page. From there, you can make and save
             the necessary changes to your profile.
-          </p>
+          </Text>
         </HighlightsTestimonialItem>
-      </Flex>
+      </SimpleGrid>
     </Highlights>
   );
 };
