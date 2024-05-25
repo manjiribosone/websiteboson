@@ -1,6 +1,7 @@
 // components/ScrollableSection.tsx
 import React from 'react';
 import styles from './ScrollableSection.module.css';
+import Image from 'next/image';
 
 
 interface Block {
@@ -21,7 +22,7 @@ const ScrollableSection: React.FC<ScrollableSectionProps> = ({ heading, blocks }
       <div className={styles.blocksContainer}>
         {blocks.map((block, index) => (
           <div key={index} className={styles.block}>
-            <img src={block.image} alt={block.title} className={styles.image} />
+            <Image src={block.image} alt={block.title} className={styles.image} />
             <h3 className={styles.title}>{block.title}</h3>
             <p className={styles.description}>{block.description}</p>
           </div>

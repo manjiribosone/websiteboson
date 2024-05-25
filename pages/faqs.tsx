@@ -139,13 +139,13 @@ const HighlightsSection = () => {
 
 
 
-<div style={{ display: 'flex', justifyContent: 'space-between', width: '220%' }}>
+<div style={{ display: "flex", justifyContent: "space-between", width: "220%"}}>
 <HighlightsTestimonialItem
         name=""
         description=""
         avatar={""}
         gradient={["pink.200", "purple.500"]}  
-        style={{ flex: 1, margin: '0 10px', padding: '20px', border: '1px solid #ccc', borderRadius: '8px' }}
+        style={{ flex: 1, margin: "0 10px", padding: "20px", border: "1px solid #ccc", borderRadius: "8px" }}
         >
            <strong>Do you offer international shipping?</strong><Br/><Br />
            <p>Yes, we offer international shipping. Our global logistics network ensures timely and reliable delivery to various international destinations, catering to your business needs worldwide.
@@ -155,7 +155,7 @@ const HighlightsSection = () => {
         description=""
         avatar={""}
         gradient={["pink.200", "purple.500"]} 
-        style={{ flex: 1, margin: '0 10px', padding: '20px', border: '1px solid #ccc', borderRadius: '8px' }}   
+        style={{ flex: 1, margin: "0 10px", padding: "20px", border: "1px solid #ccc", borderRadius: "8px" }} 
         >
           <strong>Is my personal information secure on your website?</strong><Br/><Br />
     <p>Yes, your personal information is secure on our website. We implement advanced encryption and stringent privacy measures to protect your data and ensure your privacy.</p>
@@ -165,7 +165,7 @@ const HighlightsSection = () => {
         description=""
         avatar={""}
         gradient={["pink.200", "purple.500"]}    
-        style={{ flex: 1, margin: '0 10px', padding: '20px', border: '1px solid #ccc', borderRadius: '8px' }}
+        style={{ flex: 1, margin: "0 10px", padding: "20px", border: "1px solid #ccc", borderRadius: "8px" }}
         >
            <strong>How can I update my account information?</strong><Br/><Br />
     <p>You can update your account information by logging into your account and navigating to the edit page. From there, you can make and save the necessary changes to your profile.</p>
