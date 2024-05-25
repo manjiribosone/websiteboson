@@ -4,59 +4,30 @@ import Image from "next/image";
 import {
   Container,
   Box,
-  Stack,
-  HStack,
-  ButtonGroup,
-  Button,
-  Icon,
+  VStack,
   Heading,
   Text,
-  Wrap,
-  Tag,
-  useClipboard,
-  IconButton,
-  VStack,
   Flex,
   SimpleGrid,
 } from "@chakra-ui/react";
-import { SEO } from "@/components/seo/seo";
-import { FallInPlace } from "@/components/motion/fall-in-place";
-import { Hero } from "@/components/hero";
-import { Link, Br } from "@saas-ui/react";
+import { useClipboard } from "@chakra-ui/react";
 import { Em } from "@/components/typography";
-import { NextjsLogo, ChakraLogo } from "@/components/logos";
-import {
-  FiArrowRight,
-  FiBox,
-  FiCheck,
-  FiCode,
-  FiCopy,
-  FiFlag,
-  FiGrid,
-  FiLock,
-  FiSearch,
-  FiSliders,
-  FiSmile,
-  FiTerminal,
-  FiThumbsUp,
-  FiToggleLeft,
-  FiTrendingUp,
-  FiUserPlus,
-} from "react-icons/fi";
-import { Features } from "@/components/features";
-import { BackgroundGradient } from "@/components/gradients/background-gradient";
-import { Faq } from "@/components/faq";
-import { Pricing } from "@/components/pricing/pricing";
-import { ButtonLink } from "@/components/button-link/button-link";
-import { Testimonial, Testimonials } from "@/components/testimonials";
-import faq from "@/data/faq";
-import testimonials from "@/data/testimonials";
-import pricing from "@/data/pricing";
 import {
   Highlights,
   HighlightsItem,
   HighlightsTestimonialItem,
 } from "@/components/highlights";
+
+
+
+
+
+import { Auth } from '@saas-ui/auth'
+import { Link } from '@saas-ui/react'
+import { BackgroundGradient } from '@/components/gradients/background-gradient'
+import { PageTransition } from '@/components/motion/page-transition'
+import { Section } from '@/components/section'
+import next from 'next'
 
 const Faqs: NextPage = () => {
   return (
@@ -67,24 +38,24 @@ const Faqs: NextPage = () => {
 };
 
 export default Faqs;
-
 const HighlightsSection = () => {
-  const { value, onCopy, hasCopied } = useClipboard("yarn add @saas-ui/react");
+  const { onCopy, hasCopied } = useClipboard("yarn add @saas-ui/react");
 
   return (
     <Highlights>
       <Heading
+      
         lineHeight="short"
         fontSize={["2xl", "3xl", "4xl"]}
         textAlign="center"
         as="p"
-        whiteSpace="nowrap" // Prevents text wrapping
+        whiteSpace="nowrap"
         mt={4}
       >
         <Em>Frequently Asked Questions!</Em>
+        
       </Heading>
-      <Br />
-
+<br/><br />
       <HighlightsItem colSpan={[1, 1, 2]} title="What is Bosone?">
         <VStack alignItems="flex-start" spacing={4}>
           <Text color="muted" fontSize={["sm", "md", "lg"]}>
@@ -99,27 +70,28 @@ const HighlightsSection = () => {
           </Text>
         </VStack>
       </HighlightsItem>
-      <Box textAlign="center" py={4}>
+
+      {/* <Box textAlign="center" py={4}>
         <Image
           src="/What.png"
           alt="Bosone mindmap"
           width={500}
           height={300}
           layout="responsive"
-          style={{ borderRadius: "8px" }}
+          style={{ borderRadius: "8px", width: "100%", height: "auto" }}
         />
-      </Box>
+      </Box> */}
 
-      <Box textAlign="center" py={4}>
+      {/* <Box textAlign="center" py={4}>
         <Image
           src="/how.png"
           alt="Bosone mindmap"
           width={500}
           height={300}
           layout="responsive"
-          style={{ borderRadius: "8px" }}
+          style={{ borderRadius: "8px", width: "100%", height: "auto" }}
         />
-      </Box>
+      </Box> */}
 
       <HighlightsItem colSpan={[1, 1, 2]} title="Why Bosone?">
         <VStack alignItems="flex-start" spacing={4}>
@@ -152,19 +124,20 @@ const HighlightsSection = () => {
           </Text>
         </VStack>
       </HighlightsItem>
+      <br/><br/>
 
-      <Box textAlign="center" py={4}>
+      {/* <Box textAlign="center" py={4}>
         <Image
           src="/network.png"
           alt="Bosone mindmap"
           width={500}
           height={300}
           layout="responsive"
-          style={{ borderRadius: "8px" }}
+          style={{ borderRadius: "8px", width: "100%", height: "auto" }}
         />
-      </Box>
+      </Box> */}
 
-      <SimpleGrid columns={[1, 1, 3]} spacing={4} py={4}>
+      {/* <SimpleGrid columns={[1, null, 3]} spacing={4} py={4}>
         <HighlightsTestimonialItem
           name=""
           description=""
@@ -177,8 +150,7 @@ const HighlightsSection = () => {
           }}
         >
           <strong>Do you offer international shipping?</strong>
-          <Br />
-          <Br />
+         
           <Text>
             Yes, we offer international shipping. Our global logistics network
             ensures timely and reliable delivery to various international
@@ -198,8 +170,7 @@ const HighlightsSection = () => {
           }}
         >
           <strong>Is my personal information secure on your website?</strong>
-          <Br />
-          <Br />
+        
           <Text>
             Yes, your personal information is secure on our website. We
             implement advanced encryption and stringent privacy measures to
@@ -219,15 +190,92 @@ const HighlightsSection = () => {
           }}
         >
           <strong>How can I update my account information?</strong>
-          <Br />
-          <Br />
+          
           <Text>
             You can update your account information by logging into your account
             and navigating to the edit page. From there, you can make and save
             the necessary changes to your profile.
           </Text>
         </HighlightsTestimonialItem>
-      </SimpleGrid>
+      </SimpleGrid> */}
+
+<Flex
+        direction={["column", "column", "row"]}
+        wrap="wrap"
+        justifyContent="space-between"
+        width="240%"
+        spacing={6}
+      >
+        <HighlightsTestimonialItem
+          name=""
+          description=""
+          avatar=""
+          gradient={["pink.200", "purple.500"]}
+          style={{
+            flex: 1,
+            margin: "10px",
+            padding: "20px",
+            border: "1px solid #ccc",
+            borderRadius: "8px",
+          }}
+        >
+          <strong>Do you offer international shipping?</strong>
+          <br />
+          <br />
+          <p>
+            Yes, we offer international shipping. Our global logistics network
+            ensures timely and reliable delivery to various international
+            destinations, catering to your business needs worldwide.
+          </p>
+        </HighlightsTestimonialItem>
+        <HighlightsTestimonialItem
+          name=""
+          description=""
+          avatar=""
+          gradient={["pink.200", "purple.500"]}
+          style={{
+            flex: 1,
+            margin: "10px",
+            padding: "20px",
+            border: "1px solid #ccc",
+            borderRadius: "8px",
+          }}
+        >
+          <strong>Is my personal information secure on your website?</strong>
+          <br />
+          <br />
+          <p>
+            Yes, your personal information is secure on our website. We
+            implement advanced encryption and stringent privacy measures to
+            protect your data and ensure your privacy.
+          </p>
+        </HighlightsTestimonialItem>
+        <HighlightsTestimonialItem
+          name=""
+          description=""
+          avatar=""
+          gradient={["pink.200", "purple.500"]}
+          style={{
+            flex: 1,
+            margin: "10px",
+            padding: "20px",
+            border: "1px solid #ccc",
+            borderRadius: "8px",
+          }}
+        >
+          <strong>How can I update my account information?</strong>
+          <br />
+          <br />
+          <p>
+            You can update your account information by logging into your account
+            and navigating to the edit page. From there, you can make and save
+            the necessary changes to your profile.
+          </p>
+        </HighlightsTestimonialItem>
+      </Flex>
     </Highlights>
   );
 };
+
+
+
