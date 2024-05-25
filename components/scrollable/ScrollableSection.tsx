@@ -2,6 +2,7 @@
 import React from 'react';
 import styles from './ScrollableSection.module.css';
 
+
 interface Block {
   image: string;
   title: string;
