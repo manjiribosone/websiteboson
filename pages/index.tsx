@@ -5,6 +5,7 @@ import { Block, blockss } from '@/data/scrolldata';
 import {
   Container,
   Box,
+  SimpleGrid,
   Stack,
   HStack,
   ButtonGroup,
@@ -329,14 +330,14 @@ const HighlightsSection = () => {
         avatar={""}
         gradient={["pink.200", "purple.500"]}    
         >
-  <Box align="left">
-    <Box columns={[1, 2, 3]}>
+  <Box textAlign="left">
+    <SimpleGrid columns={[1, 2, 3]}>
       <Icon as={FiLock} boxSize={5} />
       <Text fontWeight="bold"><Em>Privacy Policy </Em></Text>
       <Text>
         Your Data , Your Privacy !
       </Text>
-    </Box>
+    </SimpleGrid>
     <Box mt={4}>
       <Text>
       
@@ -373,7 +374,7 @@ const HighlightsSection = () => {
                   Learn More
                 </ButtonLink></ButtonGroup>
   </Box> */}
-  <Box align="left">
+  <Box textAlign="left">
   <Box mb={4}>
     <Box display="flex" alignItems="center" mb={2}>
       <Icon as={FiSearch} boxSize={5} />
@@ -477,8 +478,8 @@ const HighlightsSection = () => {
         avatar={""}
         gradient={["pink.200", "purple.500"]}    
         >
-  <Box align="left">
-    <Box columns={[1, 2, 3]}>
+  <Box textAlign="left">
+    <SimpleGrid columns={[1, 2, 3]}>
     <Image
             src="/ppc.png"
             alt="Bosone mindmap"
@@ -491,7 +492,7 @@ const HighlightsSection = () => {
       <Text>
       Innovative paper packaging for a sustainable and eco-conscious future.
       </Text>
-    </Box>
+    </SimpleGrid>
     <Box mt={4}>
       <Text>
       
