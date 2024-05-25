@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
+import { Block, blocks } from '@/data/scrolldata';
 import {
   Container,
   Box,
@@ -775,6 +776,8 @@ const HighlightsSection = () => {
 //   );
 // };
 
+export type { Block };
+export { blocks };
 export default Home;
 
 // export async function getStaticProps() {
