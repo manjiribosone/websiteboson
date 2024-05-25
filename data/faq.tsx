@@ -5,26 +5,33 @@ const faq = {
   // description: '',
   items: [
     {
-      q: 'How many products can I use Saas UI Pro for?',
+      q: 'What is Bosone?',
       a: (
         <>
-          The single license can be used for one commercial application or SaaS
-          product and unlimited internal tools. You can buy as many licenses as
-          you need. <br /> The unlimited license does not have any restrictions.
+         Bosone is a platform providing a suite of business tools, including a marketplace, catalog, order maintenance, 
+         and marketing features, designed to streamline and enhance business operations.
         </>
       ),
     },
     {
-      q: 'Can I use Saas UI Pro for client work?',
-      a: "Yes, that's totally up to you, as long as it fits the license you purchase.",
+      q: 'Why Bosone?',
+      a: "Bosone offers an all-in-one platform with features like a robust marketplace, comprehensive catalog, efficient order maintenance, and powerful marketing tools, streamlining business operations and boosting growth.",
     },
     {
-      q: 'Can I use Saas UI Pro for Open Source projects?',
-      a: 'No currently not. A large part of Saas UI is already released under MIT license. We try to give back to the community as much as possible.',
+      q: 'What is the customer networking feature?',
+      a: 'The customer networking feature connects businesses with potential clients and partners, facilitating seamless communication and collaboration.',
     },
     {
-      q: 'Does Saas UI include Figma, Sketch or other design files?',
-      a: 'No, Saas UI does not include any design assets. Maintaining design resources costs a lot of extra effort. We believe small teams can move much faster by designing directly in code, with help of Storybooks.',
+      q: 'Do you offer international shipping?',
+      a: 'Yes, we offer international shipping. Our global logistics network ensures timely and reliable delivery to various international destinations, catering to your business needs worldwide.',
+    },
+    {
+      q: 'Is my personal information secure on your website?',
+      a: 'Yes, your personal information is secure on our website. We implement advanced encryption and stringent privacy measures to protect your data and ensure your privacy.',
+    },
+    {
+      q: 'How can I update my account information?',
+      a: 'You can update your account information by logging into your account and navigating to the edit page. From there, you can make and save the necessary changes to your profile.',
     },
   ],
 }

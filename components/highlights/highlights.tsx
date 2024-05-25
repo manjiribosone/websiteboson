@@ -26,12 +26,14 @@ export const HighlightsItem: React.FC<HighlightBoxProps> = (props) => {
       as={Card}
       borderRadius="md"
       p="8"
+      width="100%"
       flex="1 0"
       alignItems="flex-start"
       spacing="8"
       overflow="hidden"
       position="relative"
       bg={useColorModeValue("white", "gray.800")}
+      w="100%" // Ensure the card takes 100% width of its container
       {...rest}
     >
       {title && (
@@ -75,22 +77,43 @@ export const HighlightsTestimonialItem: React.FC<
         zIndex="0"
         _dark={{ opacity: 0.5, filter: "blur(50px)" }}
       />
-      <Testimonial
-        name={name}
-        description={
-          <Box as="span" color="whiteAlpha.700">
-            {description}
-          </Box>
-        }
-        avatar={avatar}
-        border="0"
-        bg="transparent"
-        boxShadow="none"
-        color="white"
-        position="relative"
+      {/* <Testimonial
+        // name={name}
+        // description={
+        //   <Box as="span" color="whiteAlpha.700">
+        //     {description}
+        //   </Box>
+        // }
+        // avatar={avatar}
+        // border="0"
+        // bg="transparent"
+        // boxShadow="none"
+        // color="white"
+        // position="relative"
       >
+       
+
         {children}
-      </Testimonial>
+      </Testimonial> */}
+      <Box
+        // bgGradient={`linear(to-r, ${gradient[0]}, ${gradient[1]})`}
+        p={4}
+        borderRadius="md"
+        boxShadow="md"
+        position="relative"
+        zIndex="1"
+      >
+        {avatar && (
+          <Avatar
+            name={name}
+            src={avatar}
+            className="highlight-testimonial-item-avatar"
+          />
+        )}
+        <Text fontWeight="bold">{name}</Text>
+        <Text>{description}</Text>
+        {children}
+      </Box>
     </HighlightsItem>
   );
 };

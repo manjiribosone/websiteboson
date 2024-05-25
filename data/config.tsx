@@ -1,7 +1,7 @@
 import { Button } from '@chakra-ui/react'
 import { Link } from '@saas-ui/react'
 import { NextSeoProps } from 'next-seo'
-import { FaGithub, FaTwitter } from 'react-icons/fa'
+import { FaEnvelope, FaGithub, FaMailchimp, FaPhone, FaTwitter } from 'react-icons/fa'
 import { FiCheck } from 'react-icons/fi'
 import { Logo } from './logo'
 
@@ -9,24 +9,28 @@ const siteConfig = {
   logo: Logo,
   seo: {
     title: 'Bosone',
-    description: 'The Business App',
+    description: '',
+    
   } as NextSeoProps,
   termsUrl: '#',
   privacyUrl: '#',
   header: {
     links: [
       {
-        id: 'features',
-        label: 'Features',
+        id: 'home',
+        label: 'Home',
       },
       {
-        id: 'pricing',
-        label: 'Pricing',
+        id: 'id',
+        label: 'Contact Us',
+           href: 'contact-us',
       },
       {
         id: 'faq',
         label: 'FAQ',
+        href:'/faqs',
       },
+    
       {
         label: 'Login',
         href: '/login',
@@ -41,22 +45,31 @@ const siteConfig = {
   footer: {
     copyright: (
       <>
-        Built by{' '}
-        <Link href="https://twitter.com/Pagebakers">Eelco Wiersma</Link>
+        {/* Built by{' '} */}
+        <Link href="/privacy-policy">Privacy Policy</Link>
       </>
     ),
     links: [
       {
-        href: 'mailto:hello@saas-ui.dev',
-        label: 'Contact',
+        label:'Contact Us :',
       },
       {
-        href: 'https://twitter.com/saas_js',
-        label: <FaTwitter size="14" />,
+        href: 'mailto:support@bosonex.com',
+        // label: 'Contact',
+        label:<FaEnvelope size="14" />
       },
       {
-        href: 'https://github.com/saas-js/saas-ui',
-        label: <FaGithub size="14" />,
+        href: 'callto:+91 9870983696',
+        // label: 'Contact',
+        label:<FaPhone size="14" />
+      },
+      {
+        // href: 'https://twitter.com/saas_js',
+        // label: <FaTwitter size="14" />,
+      },
+      {
+        // href: 'https://github.com/saas-js/saas-ui',
+        // label: <FaGithub size="14" />,
       },
     ],
   },

@@ -1,61 +1,32 @@
-import { useState } from 'react'
+import { ChakraProvider, Flex, Box, Link, Button, ButtonGroup } from '@chakra-ui/react';
+import Image from 'next/image';
 import theme from '@/app/theme/theme';
 
-import {
-	Flex, Box,
-	Link, Button,
-	Menu,
-	MenuButton,
-	MenuList,
-	MenuItem,
-	MenuDivider,
-    ButtonGroup,
-    ChakraProvider
-} from "@chakra-ui/react";
-import Image from 'next/image';
-
-
-
-const Nav = () => {
-
-	return (
-      <ChakraProvider theme={theme}>
-        <Box bg='black' className="w-full h-20 sticky top-0">
-        <div className="container mx-auto px-4 h-full">
-          <div className="flex justify-between items-center h-full">
+const Navigate = () => {
+  return (
+    <ChakraProvider theme={theme}>
+      <Box bg="black" className="w-full h-20 sticky top-0 z-50">
+        <Flex className="container mx-auto px-4 h-full" justify="space-between" align="center">
           <Image
-            src="/bosone-logo.png"
+            src="/BoLo.png"
             alt="Bosone Logo"
             width={100}  // Set appropriate width
             height={70} // Set appropriate height
-            className='justify-center'
+            className="justify-start"
           />
-            <ul className="hidden md:flex gap-x-6 text-white">
-              <li>
-                <Link href="/about">
-                  <p>About Us</p>
-                </Link>
-              </li>
-              <li>
-                <Link href="/services">
-                  <p>Services</p>
-                </Link>
-              </li>
-              <li>
-                <Link href="/contacts">
-                  <p>Contacts</p>
-                </Link>
-              </li>
-            </ul>
-            <ButtonGroup spacing='6'>
-            <Button >Signup</Button>
-            <Button bg='brand.dark-brand-bg1' _hover={{bg: 'brand.dark-brand-bg1-pressed', color: 'white'}} >Login</Button>
-            </ButtonGroup>
-          </div>
-        </div>
+          <Flex as="nav" gap={6} align="center" className="hidden md:flex text-white">
+            <Link href="/about">About Us</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/contacts">Contacts</Link>
+          </Flex>
+          <ButtonGroup spacing={6} className="hidden md:flex">
+            <Button>Sign up</Button>
+            <Button bg="brand.dark-brand-bg1" _hover={{ bg: 'brand.dark-brand-bg1-pressed', color: 'white' }}>Login</Button>
+          </ButtonGroup>
+        </Flex>
       </Box>
-      </ChakraProvider>
-	);
-  
+    </ChakraProvider>
+  );
 };
-export default Nav;
+
+export default Navigate;

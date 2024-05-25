@@ -1,4 +1,17 @@
-import { Flex, Box, Input, FormControl, FormLabel, Textarea, Button, Heading, VStack, Text, useColorModeValue, Center } from '@chakra-ui/react'
+import {
+  Flex,
+  Box,
+  Input,
+  FormControl,
+  FormLabel,
+  Textarea,
+  Button,
+  Heading,
+  VStack,
+  Text,
+  useColorModeValue,
+  Center,
+} from '@chakra-ui/react'
 import { NextPage } from 'next'
 import { useState } from 'react'
 
@@ -20,11 +33,31 @@ const ContactUs: NextPage = () => {
   const borderColor = useColorModeValue('gray.200', 'gray.600')
 
   return (
-    <Center p={8} mt={20} >
+    <Center p={8} mt={20}>
       <Flex width="100%" direction={{ base: 'column', md: 'row' }} gap={8}>
-        <Box flex={1} shadow="md" borderRadius="lg" overflow="hidden" p={8} bg={bg} color={color}>
+        <Box flex={1} color={color}>
+          <Heading as="h2" size="lg" mb={4} variant="primary">
+            Contact Info
+          </Heading>
+          <Text fontSize="md" mb={2}>
+            <b>Bosone</b>
+          </Text>
+          <Text fontSize="md" mb={2}>
+            Mumbai - HQ
+          </Text>
+          <Text fontSize="md" mb={2}>
+            Address: 76/612, Motilal Nagar no.1, Goregaon West, Mumbai - 400104
+          </Text>
+          <Text fontSize="md" mb={2}>
+            +91 9870983696
+          </Text>
+          <Text fontSize="md">
+            support@bosonex.com
+          </Text>
+        </Box>
+        <Box flex={2} shadow="md" borderRadius="lg" overflow="hidden" p={8} bg={bg} color={color}>
           <VStack spacing={6}>
-            <Heading as="h1" size="xl" textAlign="center">
+            <Heading as="h1" size="xl" textAlign="center" variant="primary">
               Contact Us
             </Heading>
             <form onSubmit={handleSubmit} style={{ width: '100%' }}>
@@ -64,32 +97,12 @@ const ContactUs: NextPage = () => {
                     _focus={{ borderColor: 'teal.500' }}
                   />
                 </FormControl>
-                <Button type="submit" colorScheme="blue" size="lg" width="full">
+                <Button type="submit" variant="primary" size="lg" width="full">
                   Send Message
                 </Button>
               </VStack>
             </form>
           </VStack>
-        </Box>
-        <Box flex={1} shadow="md" borderRadius="lg" overflow="hidden" p={8} bg={bg} color={color}>
-          <Heading as="h2" size="lg" mb={4}>
-            Contact Info
-          </Heading>
-          <Text fontSize="md" mb={2}>
-            <b>Bosone</b>
-          </Text>
-          <Text fontSize="md" mb={2}>
-            Mumbai - HQ
-          </Text>
-          <Text fontSize="md" mb={2}>
-            Address: 76/612, Motilal Nagar no.1, Goregaon West, Mumbai - 400104
-          </Text>
-          <Text fontSize="md" mb={2}>
-            +91 9870983696
-          </Text>
-          <Text fontSize="md">
-            support@bosonex.com
-          </Text>
         </Box>
       </Flex>
     </Center>
