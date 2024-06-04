@@ -7,13 +7,15 @@ const Navigate = () => {
     <ChakraProvider theme={theme}>
       <Box bg="black" className="w-full h-20 sticky top-0 z-50">
         <Flex className="container mx-auto px-4 h-full" justify="space-between" align="center">
-          <Image
-            src="/BoLo.png"
-            alt="Bosone Logo"
-            width={100}  // Set appropriate width
-            height={70} // Set appropriate height
-            className="justify-start"
-          />
+       
+        <Image 
+          src="/BoLo.png" 
+          alt="Bosone Logo"
+          width={100}  // Set appropriate width
+          height={70} // Set appropriate height
+          className="justify-start"
+        />
+     
           <Flex as="nav" gap={6} align="center" className="hidden md:flex text-white">
             <Link href="/about">About Us</Link>
             <Link href="/services">Services</Link>
