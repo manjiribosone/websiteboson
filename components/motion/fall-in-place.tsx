@@ -1,10 +1,10 @@
-import { MotionBox, MotionBoxProps } from './box'
-import React from 'react'
+import { MotionBox, MotionBoxProps } from './box';
+import React from 'react';
 
 export const FallInPlace: React.FC<MotionBoxProps & { delay?: number }> = (
   props
 ) => {
-  const { children, delay = 0.2, ...rest } = props
+  const { children, delay = 0.2, ...rest } = props;
   return (
     <MotionBox
       initial={{ scale: 1, opacity: 0, translateY: '20px' }}
@@ -15,9 +15,13 @@ export const FallInPlace: React.FC<MotionBoxProps & { delay?: number }> = (
         duration: 2,
         delay,
       }}
+      color='primary'
       {...rest}
     >
+     
+  
+    
       {children}
     </MotionBox>
-  )
-}
+  );
+};

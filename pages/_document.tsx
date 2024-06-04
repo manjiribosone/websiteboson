@@ -25,6 +25,10 @@ export default class Document extends NextDocument {
             href="/static/favicons/favicon-16x16.png"
           />
           <link rel="manifest" href="/static/favicons/manifest.json" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;500&family=Montserrat:wght@400;600&family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />

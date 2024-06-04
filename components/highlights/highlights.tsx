@@ -1,4 +1,5 @@
 import {
+  Icon,
   Avatar,
   Box,
   Card,
@@ -27,6 +28,7 @@ export const HighlightsItem: React.FC<HighlightBoxProps> = (props) => {
       as={Card}
       borderRadius="md"
       p="8"
+      
       width="100%"
       flex="1 0"
       alignItems="flex-start"
@@ -38,7 +40,7 @@ export const HighlightsItem: React.FC<HighlightBoxProps> = (props) => {
       {...rest}
     >
       {title && (
-        <Heading fontSize="3xl" mb="8">
+        <Heading  fontFamily= 'Mitr' fontWeight='50' fontSize='xx-large' mb="8">
           {title}
         </Heading>
       )}
@@ -79,18 +81,18 @@ export const HighlightsTestimonialItem: React.FC<
         _dark={{ opacity: 0.5, filter: "blur(50px)" }}
       />
       {/* <Testimonial
-        // name={name}
-        // description={
-        //   <Box as="span" color="whiteAlpha.700">
-        //     {description}
-        //   </Box>
-        // }
-        // avatar={avatar}
-        // border="0"
-        // bg="transparent"
-        // boxShadow="none"
-        // color="white"
-        // position="relative"
+        name={name}
+        description={
+          <Box as="span" color="whiteAlpha.700">
+            {description}
+          </Box>
+        }
+        avatar={avatar}
+        border="0"
+        bg="transparent"
+        boxShadow="none"
+        color="white"
+        position="relative"
       >
        
 
@@ -111,7 +113,7 @@ export const HighlightsTestimonialItem: React.FC<
             className="highlight-testimonial-item-avatar"
           />
         )}
-        <Text fontWeight="bold">{name}</Text>
+        <Text fontFamily='Roboto' fontWeight="300" fontSize='20px'>{name}</Text>
         <Text>{description}</Text>
         {children}
       </Box>

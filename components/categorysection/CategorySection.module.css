@@ -1,0 +1,194 @@
+.category {
+  padding: 50px 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.headingTitle {
+  margin-bottom: 30px;
+}
+
+.heading-title h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.sliderWrapper {
+  position: relative;
+}
+
+.slick-prev,
+.slick-next {
+  width: 35px;
+  height: 35px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: #fbefef;
+}
+.slick-prev {
+  left: -55px;
+}
+.slick-next {
+  right: -55px;
+}
+
+.nextArrow, .prevArrow {
+  display: block;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-color: var(--arrow-background-color);
+  border-radius: 50%;
+  color: var(--arrow-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nextArrow:hover, .prevArrow:hover {
+  background-color: var(--arrow-hover-background-color);
+  color: var(--arrow-hover-color);
+}
+
+.sliderItem {
+  padding: 0 40px; /* Reduced padding for less spacing */
+}
+
+.card {
+  background: linear-gradient(145deg, rgba(206, 203, 203, 0.1), rgba(0, 0, 0, 0.2));
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.15;
+  max-width: 275px;
+  margin: 0 auto; /* Center the card */
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 25px rgba(44, 42, 42, 0.755);
+}
+
+.card .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.Image {
+  position: relative;
+  padding: 20px;
+}
+
+.ImageWrapper {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; /* This ensures a square aspect ratio */
+  overflow: hidden;
+  border-radius: 15px; /* Rounded corners */
+}
+.ImageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s, filter 0.3s;
+  border-radius: 15px; /* Apply border-radius to the image */
+}
+
+
+.img {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.img:hover img {
+  transform: scale(1.1);
+}
+
+.imgText {
+  bottom: -20px;
+  font-family: 'Roboto';
+  font-weight: 200;
+  font-size: 20px;
+  padding: 15px;
+  text-align: center;
+}
+
+.imgText h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: semi-bold;
+}
+
+@media (max-width: 1024px) {
+  .img {
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+@media (max-width: 768px) {
+  .img {
+    height: fit-content;
+  }
+}
+
+@media (max-width: 480px) {
+  .img {
+    height: fit-content;
+  }
+}
+
+/* 
+Light Theme Variables 
+:root {
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --card-background-color: #fff;
+  --card-border-color: #ddd;
+}
+
+ Dark Theme Variables 
+[data-theme='dark'] {
+  --background-color: #333;
+  --text-color: #f9f9f9;
+  --card-background-color: #444;
+  --card-border-color: #555;
+} */

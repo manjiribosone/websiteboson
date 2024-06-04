@@ -26,6 +26,7 @@ import { FallInPlace } from "@/components/motion/fall-in-place";
 import { Hero } from "@/components/hero";
 import { Link, Br } from "@saas-ui/react";
 import { Em } from "@/components/typography";
+
 import { NextjsLogo, ChakraLogo } from "@/components/logos";
 import {
   FiArrowRight,
@@ -54,7 +55,7 @@ import { ButtonLink } from "@/components/button-link/button-link";
 import { Testimonial, Testimonials } from "@/components/testimonials";
 
 import faq from "@/data/faq";
-import testimonials from "@/data/testimonials";
+
 import pricing from "@/data/pricing";
 
 
@@ -63,8 +64,9 @@ import {
   HighlightsItem,
   HighlightsTestimonialItem,
 } from "@/components/highlights";
-import { blocks } from "@/data/category";
-import ScrollableSection from "@/components/scrollable/ScrollableSection";
+import CategorySection from "@/components/categorysection/CategorySection";
+import Newfont from "@/components/testingfonts/newfont";
+import { Float } from "@/components/motion/float";
 
 
 
@@ -81,6 +83,11 @@ const Home: NextPage = () => {
         <HeroSection />
 
         <HighlightsSection />
+
+      
+    <CategorySection/>
+
+  {/* <Newfont/> */}
 
         {/* <HomePage /> */}
        
@@ -111,12 +118,12 @@ const HeroSection: React.FC = () => {
             justifyContent="flex-start"
             px="0"
             title={
-              <FallInPlace>
+              <FallInPlace fontFamily= 'Mitr' fontWeight='50' fontSize='xxx-large'>
                 Bosone 
               </FallInPlace>
             }
             description={
-              <FallInPlace delay={0.4} fontWeight="medium">
+              <FallInPlace delay={0.4} fontFamily='Roboto' fontWeight="300" fontSize='20px'>
                 Bosone is a dynamic <Em>B2B</Em> app that lets businesses create profiles, build and manage product catalogs, 
                 sell products, and connect with other enterprises, all in one seamless platform.<Br />
               </FallInPlace>
@@ -128,28 +135,10 @@ const HeroSection: React.FC = () => {
               </HStack> */}
 
               <ButtonGroup spacing={4} alignItems="center">
-                <ButtonLink colorScheme="primary" size="lg" href="/sigunp">
+                <ButtonLink fontFamily='Roboto' fontWeight="300" fontSize='20px' colorScheme="primary" size="lg" href="/sigunp">
                   Sign Up
                 </ButtonLink>
-                {/* <ButtonLink
-                  size="lg"
-                  href="https://demo.saas-ui.dev"
-                  variant="outline"
-                  rightIcon={
-                    <Icon
-                      as={FiArrowRight}
-                      sx={{
-                        transitionProperty: "common",
-                        transitionDuration: "normal",
-                        ".chakra-button:hover &": {
-                          transform: "translate(5px)",
-                        },
-                      }}
-                    />
-                  }
-                >
-                  View demo
-                </ButtonLink> */}
+                
               </ButtonGroup>
             </FallInPlace>
           </Hero>
@@ -177,21 +166,29 @@ const HeroSection: React.FC = () => {
             </FallInPlace>
           </Box>
         </Stack>
-      </Container><Br /><Br />
+      </Container><Br /><Br /><Br/><Br/>
 
-      <Heading
+      {/* <Heading
           lineHeight="short"
           fontSize={["2xl", null, "4xl"]}
+          fontWeight="Bold"
           textAlign="center"
           as="p"
         >
           <Em>Bosone Toolkit</Em>
-          <Br /> Unlock New Possibilities with Our Toolkit.
-        </Heading>
+          <Br /> 
+        </Heading> */}
+         <FallInPlace textAlign="center"  fontFamily= 'Mitr' fontWeight='50' fontSize='xx-large'>
+                Bosone Toolkit
+              </FallInPlace>
+        <Float delay={0.4} fontFamily='Roboto' fontWeight="300" fontSize='20px' textAlign="center">
+        Unlock New Possibilities with Our Toolkit
+              </Float>
+       
 
       <Features
         id="benefits"
-        columns={[1, 2, 4]}
+        columns={[1, 1, 1]}
         iconSize={4}
         innerWidth="container.xl"
         pt="20"
@@ -203,30 +200,7 @@ const HeroSection: React.FC = () => {
             iconPosition: "left",
             delay: 0.6,
           },
-          // {
-          //   title: "Themable",
-          //   icon: FiSliders,
-          //   description:
-          //     "Fully customize all components to your brand with theme support and style props.",
-          //   iconPosition: "left",
-          //   delay: 0.8,
-          // },
-          // {
-          //   title: "Composable",
-          //   icon: FiGrid,
-          //   description:
-          //     "Compose components to fit your needs and mix them together to create new ones.",
-          //   iconPosition: "left",
-          //   delay: 1,
-          // },
-          // {
-          //   title: "Productive",
-          //   icon: FiThumbsUp,
-          //   description:
-          //     "Designed to reduce boilerplate and fully typed, build your product at speed.",
-          //   iconPosition: "left",
-          //   delay: 1.1,
-          // },
+          
         ]}
         reveal={FallInPlace}
       />
@@ -245,13 +219,13 @@ const HighlightsSection = () => {
       
       <HighlightsItem colSpan={[1, null, 2]} title="Bosonex Features">
         <VStack alignItems="flex-start" spacing="8">
-        <Text color="muted" fontSize="lg">
+        <Text color="muted" >
         Unlock the ultimate commerce experience with our all-in-one platform! Effortlessly sign up or log in, 
           craft your personalized profile, and build stunning product catalogs. Seamlessly buy and sell products while 
           efficiently managing your sales and purchase orders. With secure payment and checkout features, our app ensures 
           a smooth transaction process, making it the perfect solution to power your online business with ease and style.
         </Text>
-        <Wrap mt="8">
+        <Wrap mt="8" fontFamily='Roboto' fontWeight="300" fontSize='16px'>
           {[
               "Sign Up",
               "Create Profile",
@@ -285,293 +259,97 @@ const HighlightsSection = () => {
         </Wrap>
 
 
-          {/* <Flex
-            rounded="full"
-            borderWidth="1px"
-            flexDirection="row"
-            alignItems="center"
-            py="1"
-            ps="8"
-            pe="2"
-            bg="primary.900"
-            _dark={{ bg: "gray.900" }}> */}
-          
-            {/* <Box>
-              <Text color="yellow.400" display="inline">
-                yarn add
-              </Text>{" "}
-              <Text color="cyan.300" display="inline">
-                @saas-ui/react
-              </Text>
-            </Box> */}
-            {/* <IconButton
-              icon={hasCopied ? <FiCheck /> : <FiCopy />}
-              aria-label="Copy install command"
-              onClick={onCopy}
-              variant="ghost"
-              ms="4"
-              isRound
-              color="white"
-            /> */}
-          {/* </Flex> */}
         </VStack>
       </HighlightsItem>
       {/* <HighlightsItem title="Solid foundations"> */}
-      <Image
-            src="/mmbosone.png"
-            alt="Bosone mindmap"
-            width={500}  // Set appropriate width
-            height={70} // Set appropriate height
-            className="justify-end"/>
+     
+           
       {/* </HighlightsItem> */}
+      
+      <FallInPlace delay={1}>
+              <Box overflow="hidden" height="100%" boxShadow="0 8px 15px rgba(0, 0, 0, 0.2);">
+                <Image
+                  src="/mm3.png"
+                  layout="fixed"
+                  width={1200}
+                  height={500}
+                  alt="Screenshot of a ListPage in Saas UI Pro"
+                  quality="90"
+                  priority
+                />
+              </Box>
+            </FallInPlace>
+    
+     
+  
+     
       <HighlightsTestimonialItem
         name=""
+        
         description=""
         avatar={""}
         gradient={["pink.200", "purple.500"]}    
         >
-  <Box textAlign="left">
-    <SimpleGrid columns={[1, 2, 3]}>
-      <Icon as={FiLock} boxSize={5} />
-      <Text fontWeight="bold"><Em>Privacy Policy </Em></Text>
-      <Text>
-        Your Data , Your Privacy !
-      </Text>
-    </SimpleGrid>
-    <Box mt={4}>
-      <Text>
-      
-      
-      </Text><br/>
-    </Box>
-    <ButtonGroup  alignItems="center">
-                <ButtonLink colorScheme="primary"  href="/privacy-policy">
+          <FallInPlace textAlign="center"  fontFamily= 'Roboto' fontWeight='50' fontSize='large'>
+                Privacy Policy
+              </FallInPlace><Br/> 
+              <ButtonGroup spacing={4} alignItems="center">
+                <ButtonLink fontFamily='Roboto' fontWeight="300" fontSize='16px' colorScheme="primary"  href="/privacy-policy">
                   Learn More
-                </ButtonLink></ButtonGroup>
-  </Box>
+                </ButtonLink>
+               </ButtonGroup>
 </HighlightsTestimonialItem>
 
       <HighlightsItem
         colSpan={[1, null, 2]}
         title="Frequently Asked Questions !"
       >
-        {/* <Box align="left">
-    <Box columns={[1, 2, 3]}>
-      <Icon as={FiSearch} boxSize={5} />
-      <Text fontWeight="bold"><Em>Privacy Policy </Em></Text>
-      <Text>
-        Your Data , Your Privacy !
-      </Text>
-    </Box>
-    <Box mt={4}>
-      <Text>
       
-      
-      </Text><br/>
-    </Box>
-    <ButtonGroup  alignItems="center">
-                <ButtonLink colorScheme="primary"  href="/privacy-policy">
-                  Learn More
-                </ButtonLink></ButtonGroup>
-  </Box> */}
   <Box textAlign="left">
   <Box mb={4}>
     <Box display="flex" alignItems="center" mb={2}>
       <Icon as={FiSearch} boxSize={5} />
-      <Link href="/faqs" fontWeight="italics" ml={2}>
+      <Link href="/faqs"  fontFamily='Roboto' fontWeight="300" fontSize='16px' fontStyle='normal'  ml={2}>
         <em>What is Bosone?</em>
       </Link>
     </Box>
     <Box display="flex" alignItems="center" mb={2}>
       <Icon as={FiSearch} boxSize={5} />
-      <Link href="/faqs" fontWeight="italics" ml={2}>
+      <Link href="/faqs" fontFamily='Roboto' fontWeight="300" fontSize='16px'  ml={2}>
         <em>Why Bosone?</em>
       </Link>
     </Box>
     <Box display="flex" alignItems="center" mb={2}>
       <Icon as={FiSearch} boxSize={5} />
-      <Link href="/faqs" fontWeight="italics" ml={2}>
+      <Link href="/faqs" fontFamily='Roboto' fontWeight="300" fontSize='16px'  ml={2}>
         <em>What is the customer networking feature? </em>
       </Link>
     </Box>
     <Box display="flex" alignItems="center" mb={2}>
       <Icon as={FiSearch} boxSize={5} />
-      <Link href="/faqs" fontWeight="italics" ml={2}>
+      <Link href="/faqs" fontFamily='Roboto' fontWeight="300" fontSize='16px' ml={2}>
         <em>Do you offer international shipping?</em>
       </Link>
     </Box>
     <Box display="flex" alignItems="center" mb={2}>
       <Icon as={FiSearch} boxSize={5} />
-      <Link href="/faqs" fontWeight="italics" ml={2}>
+      <Link href="/faqs" fontFamily='Roboto' fontWeight="300" fontSize='16px' ml={2}>
         <em>Is my personal information secure on your website?</em>
       </Link>
     </Box>
     <Box display="flex" alignItems="center" mb={2}>
       <Icon as={FiSearch} boxSize={5} />
-      <Link href="/faqs" fontWeight="italics" ml={2}>
+      <Link href="/faqs" fontFamily='Roboto' fontWeight="300" fontSize='16px'  ml={2}>
         <em>How can I update my account information?</em>
       </Link>
     </Box>
   </Box>
-  {/* <Text mb={4}>
-    Your Data, Your Privacy!
-  </Text> */}
-  <Box mt={4}></Box>
-</Box>
 
-        {/* <Text color="muted" fontSize="lg">
-        Unlock the ultimate commerce experience with our all-in-one platform! Effortlessly sign up or log in, 
-          craft your personalized profile, and build stunning product catalogs. Seamlessly buy and sell products while 
-          efficiently managing your sales and purchase orders. With secure payment and checkout features, our app ensures 
-          a smooth transaction process, making it the perfect solution to power your online business with ease and style..
-        </Text>
-        <Wrap mt="8">
-          {[
-            "authentication",
-            "navigation",
-            "crud",
-            "settings",
-            "multi-tenancy",
-            "layouts",
-            "billing",
-            "a11y testing",
-            "server-side rendering",
-            "documentation",
-            "onboarding",
-            "storybooks",
-            "theming",
-            "upselling",
-            "unit testing",
-            "feature flags",
-            "responsiveness",
-          ].map((value) => (
-            <Tag
-              key={value}
-              variant="subtle"
-              colorScheme="purple"
-              rounded="full"
-              px="3"
-            >
-              {value}
-            </Tag>
-          ))}
-        </Wrap> */}
+</Box>
 
         
       </HighlightsItem><Br/><Br/><Br/><Br/>
-
         
-
-      <Heading
-          lineHeight="short"
-          fontSize={["2xl", null, "4xl"]}
-          textAlign="center"
-          as="p"
-        >
-          <Em>Categories & Industries</Em>
-          
-        </Heading><Br/>
-
-        <HighlightsTestimonialItem
-        name=""
-        description=""
-        avatar={""}
-        gradient={["pink.200", "purple.500"]}    
-        >
-  <Box textAlign="left">
-    <SimpleGrid columns={[1, 2, 3]}>
-    <Image
-            src="/ppc.png"
-            alt="Bosone mindmap"
-            width={500}  // Set appropriate width
-            height={70} // Set appropriate height
-            className="justify-end"/><Br />
-
-      {/* <Icon as={FiLock} boxSize={5} /> */}
-      <Text fontWeight="bold"><Em> Paper Packaging </Em></Text>
-      <Text>
-      Innovative paper packaging for a sustainable and eco-conscious future.
-      </Text>
-    </SimpleGrid>
-    <Box mt={4}>
-      <Text>
-      
-      
-      </Text><br/>
-    </Box>
-    {/* <ButtonGroup  alignItems="center">
-                <ButtonLink colorScheme="primary"  href="/privacy-policy">
-                  Learn More
-                </ButtonLink></ButtonGroup> */}
-  </Box>
-        
-        </HighlightsTestimonialItem>
-        {/* <HighlightsTestimonialItem
-        name=""
-        description=""
-        avatar={""}
-        gradient={["pink.200", "purple.500"]}    
-        >
-  <Box align="left">
-  <Image
-            src="/ppc.png"
-            alt="Bosone mindmap"
-            width={500}  // Set appropriate width
-            height={70} // Set appropriate height
-            className="justify-end"/>
-    <Box columns={[1, 2, 3]}>
-      <Icon as={FiLock} boxSize={5} />
-      <Text fontWeight="bold"><Em>Privacy Policy </Em></Text>
-      <Text>
-        Your Data , Your Privacy !
-      </Text>
-    </Box>
-    <Box mt={4}>
-      <Text>
-      
-      
-      </Text><br/>
-    </Box>
-    <ButtonGroup  alignItems="center">
-                <ButtonLink colorScheme="primary"  href="/privacy-policy">
-                  Learn More
-                </ButtonLink></ButtonGroup>
-  </Box>
-        
-        </HighlightsTestimonialItem>
-        <HighlightsTestimonialItem
-        name=""
-        description=""
-        avatar={""}
-        gradient={["pink.200", "purple.500"]}    
-        >
-  <Box align="left">
-  <Image
-            src="/ppc.png"
-            alt="Bosone mindmap"
-            width={500}  // Set appropriate width
-            height={70} // Set appropriate height
-            className="justify-end"/>
-    <Box columns={[1, 2, 3]}>
-      <Icon as={FiLock} boxSize={5} />
-      <Text fontWeight="bold"><Em>Privacy Policy </Em></Text>
-      <Text>
-        Your Data , Your Privacy !
-      </Text>
-    </Box>
-    <Box mt={4}>
-      <Text>
-      
-      
-      </Text><br/>
-    </Box>
-    <ButtonGroup  alignItems="center">
-                <ButtonLink colorScheme="primary"  href="/privacy-policy">
-                  Learn More
-                </ButtonLink></ButtonGroup>
-  </Box>
-        
-        </HighlightsTestimonialItem> */}
     </Highlights>
     
   );

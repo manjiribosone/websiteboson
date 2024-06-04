@@ -17,6 +17,7 @@ export const Float: React.FC<
         repeatDelay: 0,
         repeatType: 'reverse',
       }}
+      color='#777'
       {...rest}
     >
       {children}

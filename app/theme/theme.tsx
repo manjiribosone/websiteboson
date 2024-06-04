@@ -13,6 +13,7 @@ import {
 import Image from "next/image";
 import { color } from 'framer-motion';
 
+
 const config: ThemeConfig = {
   initialColorMode: 'dark',
   useSystemColorMode: false,

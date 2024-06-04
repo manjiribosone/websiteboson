@@ -2,10 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Apply the Mitr font globally or to a specific class */
+
+
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --card-background-color: #fff;
+  --card-border-color: #ddd;
+  --arrow-background-color: #ddd;
+  --arrow-color: #333;
+  --arrow-hover-background-color: #bbb;
+  --arrow-hover-color: #000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +28,15 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+
+    --background-color: #333;
+  --text-color: #f9f9f9;
+  --card-background-color: #444;
+  --card-border-color: #555;
+  --arrow-background-color: #555;
+  --arrow-color: #f9f9f9;
+  --arrow-hover-background-color: #777;
+  --arrow-hover-color: #fff;
   }
 }
 
@@ -45,7 +69,4 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
-
-
-
 

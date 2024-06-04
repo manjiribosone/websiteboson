@@ -8,14 +8,17 @@ const Features = {
       direction: 'row',
     },
     title: {
+      fontFamily:'Mitr',
       as: 'h4',
-      size: 'md',
-      fontWeight: 'medium',
+      size:'x-large',
+      fontWeight: '50',
       mb: 2,
     },
     description: {
-      fontSize: 'md',
+      fontFamily:'Roboto',
+      fontSize: 'medium',
       color: 'gray.400',
+      fontWeight:"300" ,
     },
     icon: {
       mb: 3,
@@ -55,14 +58,16 @@ export const Feature = {
       flexDirection: 'column',
     },
     title: {
+      fontFamily:'Mitr',
       as: 'h4',
-      fontSize: 'lg',
-      fontWeight: '700',
+      fontSize: 'x-large',
+      fontWeight: '50',
       mb: 2,
     },
     description: {
-      fontSize: 'lg',
-      fontWeight: 'normal',
+      fontFamily:'Roboto',
+      fontSize: 'medium',
+      fontWeight:"300" ,
       color: mode('gray.500', 'gray.400')(props),
     },
     icon: {
@@ -89,9 +94,11 @@ export const Feature = {
         alignItems: 'center',
       },
       title: {
+        fontFamily:'Mitr',
         textAlign: 'center',
       },
       description: {
+        fontFamily:'Roboto',
         textAlign: 'center',
       },
     },
@@ -100,11 +107,13 @@ export const Feature = {
         flexDirection: 'row',
       },
       title: {
+        fontFamily:'Mitr',
         display: 'inline-block',
         mr: 1,
         mb: 0,
       },
       description: {
+        fontFamily:'Roboto',
         display: 'inline',
       },
       icon: {

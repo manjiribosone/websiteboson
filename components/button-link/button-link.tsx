@@ -10,7 +10,7 @@ export const ButtonLink: React.FC<ButtonLinkProps> = ({
 }) => {
   return (
     <NextLink href={href} passHref>
-      <Button {...props}>{children}</Button>
+      <Button  {...props}>{children}</Button>
     </NextLink>
   )
 }
