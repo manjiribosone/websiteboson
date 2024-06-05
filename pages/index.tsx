@@ -130,9 +130,7 @@ const HeroSection: React.FC = () => {
             }
           >
             <FallInPlace delay={0.8}><Br />
-              {/* <HStack pt="4" pb="12" spacing="8">
-                <NextjsLogo height="28px" /> <ChakraLogo height="20px" />
-              </HStack> */}
+             
 
               <ButtonGroup spacing={4} alignItems="center">
                 <ButtonLink fontFamily='Roboto' fontWeight="300" fontSize='20px' colorScheme="primary" size="lg" href="/sigunp">
@@ -178,7 +176,7 @@ const HeroSection: React.FC = () => {
           <Em>Bosone Toolkit</Em>
           <Br /> 
         </Heading> */}
-         <FallInPlace textAlign="center"  fontFamily= 'Mitr' fontWeight='50' fontSize='xx-large'>
+         <FallInPlace textAlign="center"  fontFamily= 'Montserrat' fontWeight='300' fontSize='xx-large'>
                 Bosone Toolkit
               </FallInPlace>
         <Float delay={0.4} fontFamily='Roboto' fontWeight="300" fontSize='20px' textAlign="center">

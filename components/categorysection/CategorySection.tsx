@@ -95,7 +95,7 @@ const CategorySection = ({  }) => (
         > 
        
         </Heading>
-        <FallInPlace textAlign="center"  fontFamily= 'Mitr' fontWeight='50' fontSize='xx-large'>
+        <FallInPlace textAlign="center"  fontFamily= 'Montserrat' fontWeight='300' fontSize='xx-large'>
         Categories & Industries
       </FallInPlace>
         <Br />

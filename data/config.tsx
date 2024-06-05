@@ -22,9 +22,15 @@ const siteConfig = {
         sx: {fontFamily:'Roboto', fontWeight:"300", fontSize:'14px'},
       },
       {
+        id: 'solutions',
+        label: 'Features',
+        href: '/solution',
+        sx: {fontFamily:'Roboto', fontWeight:"300", fontSize:'14px'},
+      },
+      {
         id: 'contact-us',
         label: 'Contact Us',
-        href: 'contact-us',
+        href: '/contact-us',
         sx: { fontFamily:'Roboto', fontWeight:"300", fontSize:'14px' },
       },
       {

@@ -30,13 +30,13 @@ const ContactUs: NextPage = () => {
   const bg = useColorModeValue('gray.50', 'gray.800')
   const inputBg = useColorModeValue('gray.100', 'gray.700')
   const color = useColorModeValue('black', 'white')
-  const borderColor = useColorModeValue('gray.200', 'gray.600')
+  const borderColor = useColorModeValue('gray.200', 'gray.500')
 
   return (
     <Center p={8} mt={20}>
       <Flex width="100%" direction={{ base: 'column', md: 'row' }} gap={8}>
         <Box flex={1} color={color}>
-          <Heading as="h2" fontFamily= 'Mitr' fontWeight='300' fontSize='x-large' mb={4} variant="primary">
+          <Heading as="h2" fontFamily= 'Montserrat' fontWeight='300' fontSize='x-large' mb={4} variant="primary">
             Contact Info
           </Heading>
           <Text fontFamily= 'Mitr' fontWeight='50' fontSize='large'  mb={2}>
@@ -57,7 +57,7 @@ const ContactUs: NextPage = () => {
         </Box>
         <Box flex={2} shadow="md" borderRadius="lg" overflow="hidden" p={8} bg={bg} color={color}>
           <VStack spacing={6}>
-            <Heading as="h1" fontFamily= 'Mitr' fontWeight='300' fontSize='xx-large'  textAlign="center" variant="primary">
+            <Heading as="h1" fontFamily= 'Montserrat' fontWeight='300' fontSize='xx-large'  textAlign="center" variant="primary">
               Contact Us
             </Heading>
             <form onSubmit={handleSubmit} style={{ width: '100%' }}>
@@ -97,7 +97,7 @@ const ContactUs: NextPage = () => {
                     _focus={{ borderColor: 'teal.500' }}
                   />
                 </FormControl>
-                <Button type="submit" fontFamily= 'Mitr' fontWeight='300'  variant="primary" size="lg" width="full">
+                <Button type="submit" fontFamily= 'Roboto' fontWeight='300'  variant="primary" size="lg" width="full">
                   Send Message
                 </Button>
               </VStack>

@@ -19,6 +19,23 @@ const config: ThemeConfig = {
   useSystemColorMode: false,
 }
 const theme = extendTheme({
+  fonts: {
+    heading: "Montserrat, sans-serif",
+    body: "Montserrat, sans-serif",
+  },
+  styles: {
+    global: {
+      "html, body": {
+        fontFamily: "Montserrat, sans-serif",
+        backgroundColor: "#f9fafb",
+        color: "#333",
+        body: {
+          bg: 'black',
+          color: 'white',
+        },
+      },
+    },
+  },
   config,
   components: {
     Button: {
@@ -31,14 +48,7 @@ const theme = extendTheme({
       },
     },
   },
-  styles: {
-    global : {
-      body: {
-        bg: 'black',
-        color: 'white',
-      },
-    },
-  },
+ 
   colors: {
     brand: {
       'dark-brand-fg1': '#479ef5',

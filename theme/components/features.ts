@@ -8,10 +8,10 @@ const Features = {
       direction: 'row',
     },
     title: {
-      fontFamily:'Mitr',
+      fontFamily:'Montserrat',
       as: 'h4',
       size:'x-large',
-      fontWeight: '50',
+      fontWeight: '300',
       mb: 2,
     },
     description: {
@@ -58,10 +58,10 @@ export const Feature = {
       flexDirection: 'column',
     },
     title: {
-      fontFamily:'Mitr',
+      fontFamily:'Montserrat',
       as: 'h4',
-      fontSize: 'x-large',
-      fontWeight: '50',
+      fontSize: 'large',
+      fontWeight: '300',
       mb: 2,
     },
     description: {
@@ -94,7 +94,7 @@ export const Feature = {
         alignItems: 'center',
       },
       title: {
-        fontFamily:'Mitr',
+        fontFamily:'Montserrat',
         textAlign: 'center',
       },
       description: {
@@ -107,7 +107,7 @@ export const Feature = {
         flexDirection: 'row',
       },
       title: {
-        fontFamily:'Mitr',
+        fontFamily:'Montserrat',
         display: 'inline-block',
         mr: 1,
         mb: 0,

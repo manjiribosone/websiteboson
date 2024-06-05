@@ -1,0 +1,72 @@
+/* Solutions.css */
+
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 40px;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  
+  
+  section {
+    margin: 40px auto ;
+    max-width: 1500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    border-radius: 10px;
+  }
+  
+  .slick-slide img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .slick-dots li button:before {
+    color: #333;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #9a3df7;
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+    color: #333;
+  }
+  
+  div.solutions-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .carousel-slide {
+    position: relative;
+    text-align: center;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .carousel-overlay {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    width: 50%;
+  }
+  
+  .left-align .carousel-overlay {
+    left: 5%;
+  }
+  
+  .right-align .carousel-overlay {
+    right: 5%;
+  }

@@ -40,7 +40,7 @@ export const HighlightsItem: React.FC<HighlightBoxProps> = (props) => {
       {...rest}
     >
       {title && (
-        <Heading  fontFamily= 'Mitr' fontWeight='50' fontSize='xx-large' mb="8">
+        <Heading  fontFamily= 'Montserrat' fontWeight='50' fontSize='x-large' mb="8">
           {title}
         </Heading>
       )}
