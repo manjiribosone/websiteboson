@@ -5,7 +5,7 @@ import React from 'react'
 const solution = () => {
   return (
     <Box>
-        <Solutions/>
+      <Solutions />
         
 
     </Box>

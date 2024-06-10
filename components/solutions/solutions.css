@@ -64,9 +64,9 @@ body {
   }
   
   .left-align .carousel-overlay {
-    left: 5%;
+    left: 0%;
   }
   
   .right-align .carousel-overlay {
-    right: 5%;
+    right: 0%;
   }

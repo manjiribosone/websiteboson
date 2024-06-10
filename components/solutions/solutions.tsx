@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css"
 import carouselData from '@/data/carouselData'
 import './solutions.css'
 import { Features } from '../features'
-import { FiSmile } from 'react-icons/fi'
+import { FiActivity, FiSmile, FiShoppingCart, FiBarChart2, FiHeadphones, FiPackage, FiUsers, FiShoppingBag } from 'react-icons/fi';
 import { FallInPlace } from '../motion/fall-in-place'
 import { BackgroundGradient } from '../gradients/background-gradient'
 import { Box, ButtonGroup, Container, Stack, Button, Heading, Text } from '@chakra-ui/react'
@@ -43,9 +43,6 @@ const Solutions = () => {
                 <Text fontSize="md" color="white" mb={4}>
                   {slide.subheading}
                 </Text>
-                <Text fontSize="sm" color="white" mb={6}>
-                  {slide.description}
-                </Text>
                 <Button colorScheme="teal" size="md">
                   {slide.buttonText}
                 </Button>
@@ -55,62 +52,71 @@ const Solutions = () => {
         </Slider>
       </section>
       {/* Other content of the page */}
-      <Box position="relative" overflow="hidden">
-        <BackgroundGradient height="100%" zIndex="-1" />
-        <Container maxW="container.xl" pt={{ base: 40, lg: 60 }} pb="40">
-          <Stack direction={{ base: "column", lg: "row" }} alignItems="center">
-            <Hero
-              id="home"
-              justifyContent="flex-start"
-              px="0"
-              title={
-                <FallInPlace fontFamily='Mitr' fontWeight='50' fontSize='xxx-large'>
-                  Bosone 
-                </FallInPlace>
-              }
-              description={
-                <FallInPlace delay={0.4} fontFamily='Roboto' fontWeight="300" fontSize='20px'>
-                  Bosone is a dynamic <Em>B2B</Em> app that lets businesses create profiles, build and manage product catalogs, 
-                  sell products, and connect with other enterprises, all in one seamless platform.<Br />
-                </FallInPlace>
-              }
-            >
-              <FallInPlace delay={0.8}><Br />
-                <ButtonGroup spacing={4} alignItems="center">
-                  <ButtonLink fontFamily='Roboto' fontWeight="300" fontSize='20px' colorScheme="primary" size="lg" href="/signup">
-                    Sign Up
-                  </ButtonLink>
-                </ButtonGroup>
+      <Br/><Br/>
+      <FallInPlace textAlign="center"  fontFamily= 'Montserrat' fontWeight='300' fontSize='xx-large'>
+                Features of Bosonex
               </FallInPlace>
-            </Hero>
-            <Box
-              height="600px"
-              position="absolute"
-              display={{ base: "none", lg: "block" }}
-              left={{ lg: "60%", xl: "55%" }}
-              width="80vw"
-              maxW="800px"
-              maxH="100px"
-              margin="0 auto"
-            >
-              <FallInPlace delay={1}>
-                <Box overflow="hidden" height="100%">
-                  <Image
-                    src="/bosonlogo.png"
-                    layout="fixed"
-                    width={1200}
-                    height={100}
-                    alt="Screenshot of a ListPage in Saas UI Pro"
-                    quality="90"
-                    priority
-                  />
-                </Box>
-              </FallInPlace>
-            </Box>
-          </Stack>
-        </Container>
-        <Br /><Br /><Br /><Br />
-      </Box>
+      <Features
+        id="benefits"
+        columns={[1, 1, 4]}
+        iconSize={4}
+        innerWidth="container.xl"
+        pt="20"
+        features={[
+          {
+            title: "Profile Management",
+            icon: FiUsers,
+            description: "Connecting Businesses, Empowering Growth",
+            iconPosition: "left",
+            delay: 0.6,
+          },
+          {
+            title: "Product Catalog",
+            icon: FiPackage,
+            description: "Connecting Businesses, Empowering Growth",
+            iconPosition: "left",
+            delay: 0.6,
+          },
+          {
+            title: "Sales Order Tracking",
+            icon: FiActivity,
+            description: "Connecting Businesses, Empowering Growth",
+            iconPosition: "left",
+            delay: 0.6,
+          },
+          {
+            title: "Purchase Order Management",
+            icon:  FiShoppingCart,
+            description: "Connecting Businesses, Empowering Growth",
+            iconPosition: "left",
+            delay: 0.6,
+          },
+          {
+            title: "MarketPlace",
+            icon: FiShoppingBag ,
+            description: "Connecting Businesses, Empowering Growth",
+            iconPosition: "left",
+            delay: 0.6,
+          },
+          {
+            title: "Business Analytics",
+            icon: FiBarChart2,
+            description: "Connecting Businesses, Empowering Growth",
+            iconPosition: "left",
+            delay: 0.6,
+          },
+          {
+            title: "24/7 Customer Support",
+            icon: FiHeadphones ,
+            description: "Connecting Businesses, Empowering Growth",
+            iconPosition: "left",
+            delay: 0.6,
+          },
+          
+          
+        ]}
+        reveal={FallInPlace}
+      />
     </div>
   )
 }
